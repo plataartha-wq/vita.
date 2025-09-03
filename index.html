@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>A Special Message for You</title>
+<style>
+  body {
+    font-family: Arial, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    background-color: #f0f0f0;
+    text-align: center;
+    flex-direction: column;
+    padding: 20px;
+  }
+  .container {
+    background-color: white;
+    padding: 30px;
+    border-radius: 15px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    max-width: 90%;
+  }
+  input[type="text"] {
+    padding: 12px;
+    width: 80%;
+    max-width: 300px;
+    margin-bottom: 20px;
+    border: 2px solid #ccc;
+    border-radius: 8px;
+    font-size: 16px;
+  }
+  button {
+    padding: 12px 25px;
+    border: none;
+    background-color: #007bff;
+    color: white;
+    border-radius: 8px;
+    font-size: 16px;
+    cursor: pointer;
+  }
+  button:hover {
+    background-color: #0056b3;
+  }
+  #message {
+    font-size: 24px;
+    color: #333;
+    display: none;
+    margin-top: 20px;
+  }
+</style>
+</head>
+<body>
+
+<div class="container">
+  <h2>Enter Your Name</h2>
+  <input type="text" id="nameInput" placeholder="Siddhartha">
+  <br>
+  <button onclick="displayMessage()">Unlock Message</button>
+  <p id="message"></p>
+</div>
+
+<script>
+  function displayMessage() {
+    var name = document.getElementById("nameInput").value;
+    var messageElement = document.getElementById("message");
+    
+    if (name.toLowerCase() === "siddhartha") {
+      messageElement.textContent = "Hey, Siddhartha. This is Srujana (maybe your teenage mistake). Adv happy anniversary. Don't wait for me. I really, really hate you. I love you.";
+      messageElement.style.display = "block";
+    } else {
+      messageElement.textContent = "I'm sorry, this message is for Siddhartha only.";
+      messageElement.style.display = "block";
+    }
+  }
+</script>
+
+</body>
+</html>
